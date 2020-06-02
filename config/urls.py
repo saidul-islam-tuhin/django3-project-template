@@ -20,7 +20,9 @@ from django.urls import path, reverse_lazy, include
 
 
 urlpatterns = [
+    path('', include("sales_prediction.apps.base.urls")),
     path('admin-panel/', admin.site.urls),
+    
 ]
 
 
