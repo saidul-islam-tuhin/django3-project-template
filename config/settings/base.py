@@ -141,3 +141,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
+# importing logger settings
+# * Pre-requirement:create logs folder
+try:
+    from .logger_settings import *
+except Exception as e:
+    # in case of any error, pass silently.
+    pass
