@@ -1,0 +1,56 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="{% block meta_description %}{% endblock meta_description %}">
+
+    <title>{% block title %}{% endblock title %}</title>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    {# Vendor CSS #}
+    <link rel="stylesheet" href="{% static 'vendor/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/css/mdb.min.css' %}">
+
+    {# Custom CSS #}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Vendor's JS-->
+    <!-- JQuery js -->
+    <script src="{% static 'vendor/js/jquery.min.js' %}"></script>
+    <!-- Popper Js -->
+    <script src="{% static 'vendor/js/popper.js' %}"></script>
+    <!-- Bootstrap Js -->
+    <script src="{% static 'vendor/js/bootstrap.js' %}"></script>
+    <!-- Material Design Js -->
+    <script src="{% static 'vendor/js/mdb.min.js' %}"></script>
+
+    {# Custom JS #}
+    <script src="{% static 'js/global.js' %}"></script>
+
+
+    {% block head %}
+    {% endblock head %}
+</head>
+<body>
+    <div class="container-fluid px-0">
+        {% block navigation %}
+            {% include "navigation.html" %}
+
+        {% endblock navigation %}
+
+        {% block content %}
+        {% endblock content %}
+
+        {% block footer %}
+            {% include "footer.html" %}
+        {% endblock footer %}
+    </div>
+</body>
+</html>
