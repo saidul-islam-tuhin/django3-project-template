@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'sales_prediction.apps.base',
     'sales_prediction.apps.user',
     'crispy_forms',
 ]
