@@ -20,7 +20,7 @@ from django.urls import path, reverse_lazy, include
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin-panel/', admin.site.urls),
 ]
 
 
