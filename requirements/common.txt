@@ -1,3 +1,4 @@
+# command: pip install -r requirements/common.txt
 django==3.0
 Pillow
 gunicorn
@@ -11,5 +12,4 @@ django-tables2
 django-debug-toolbar
 python-dateutil
 psycopg2-binary
-
 
