@@ -1,0 +1,15 @@
+django==2.2.0
+Pillow
+gunicorn
+
+django-extensions
+django-crispy-forms
+Werkzeug
+requests
+django-environ
+django-tables2
+django-debug-toolbar
+python-dateutil
+psycopg2-binary
+
+
