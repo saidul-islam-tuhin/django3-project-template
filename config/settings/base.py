@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import environ
+from django.urls import reverse_lazy
+from django.contrib.messages import constants as message_constants
 
 env = environ.Env()
 env.read_env(".env")
@@ -50,6 +52,7 @@ INSTALLED_APPS = [
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+MESSAGE_TAGS = {message_constants.ERROR: 'danger'}
 
 
 MIDDLEWARE = [
@@ -128,6 +131,11 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# LOGIN_URL = reverse_lazy('auth_login')
+# LOGIN_REDIRECT_URL = reverse_lazy('home_page')
+# LOGOUT_REDIRECT_URL = reverse_lazy('auth_login')
+
 
 
 # Static files (CSS, JavaScript, Images)
