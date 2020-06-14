@@ -39,11 +39,31 @@
             {% include "footer.html" %}
         {% endblock footer %}
     </div>
-        <!-- Vendor's JS-->
+    <!-- Notify message     -->
+    {% if messages %}
+        <script>
+        $(document).ready(function() {
+            {% for message in messages %}
+                
+                $.notify({
+                    // options
+                    message: "{{message}}"
+                },{
+                    // settings
+                    type: "{{message.tags}}"
+                });
+            {% endfor %}
+        });
+        </script>
+    {% endif %}
+    
+     <!-- Vendor's JS-->
     <!-- JQuery js -->
     <script src="{% static 'vendor/js/jquery.min.js' %}"></script>
     <!-- Popper Js -->
     <script src="{% static 'vendor/js/popper.js' %}"></script>
+    <!-- Notify Js -->
+    <script src="{% static 'vendor/js/notify.js' %}"></script>
     <!-- Bootstrap Js -->
     <script src="{% static 'vendor/js/bootstrap.js' %}"></script>
     <!-- Material Design Js -->
