@@ -21,19 +21,6 @@
     {# Custom CSS #}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <!-- Vendor's JS-->
-    <!-- JQuery js -->
-    <script src="{% static 'vendor/js/jquery.min.js' %}"></script>
-    <!-- Popper Js -->
-    <script src="{% static 'vendor/js/popper.js' %}"></script>
-    <!-- Bootstrap Js -->
-    <script src="{% static 'vendor/js/bootstrap.js' %}"></script>
-    <!-- Material Design Js -->
-    <script src="{% static 'vendor/js/mdb.min.js' %}"></script>
-
-    {# Custom JS #}
-    <script src="{% static 'js/global.js' %}"></script>
-
 
     {% block head %}
     {% endblock head %}
@@ -52,5 +39,18 @@
             {% include "footer.html" %}
         {% endblock footer %}
     </div>
+        <!-- Vendor's JS-->
+    <!-- JQuery js -->
+    <script src="{% static 'vendor/js/jquery.min.js' %}"></script>
+    <!-- Popper Js -->
+    <script src="{% static 'vendor/js/popper.js' %}"></script>
+    <!-- Bootstrap Js -->
+    <script src="{% static 'vendor/js/bootstrap.js' %}"></script>
+    <!-- Material Design Js -->
+    <script src="{% static 'vendor/js/mdb.min.js' %}"></script>
+
+    {# Custom JS #}
+    <script src="{% static 'js/global.js' %}"></script>
+
 </body>
 </html>
